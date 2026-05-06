@@ -125,18 +125,18 @@
   max-width: 680px;
 }
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-    }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
 
     .card {
   background: white;
   border-radius: 24px;
-  padding: 24px;
+  padding: 22px;
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-  min-height: 260px;
+  min-height: 240px;
   transition: all 0.3s ease;
 }
 
@@ -299,7 +299,10 @@
       background: white;
     }
 
-    @media (max-width: 760px) {
+    .cards {
+  grid-template-columns: 1fr;
+}
+   
       .contact-card {
         flex-direction: column;
         text-align: center;
@@ -326,7 +329,7 @@
     <div class="hero-box">
       <div class="label">Aus der Nachbarschaft 😊</div>
       <h1>AlltagsHilfe Service</h1>
-      <p>Kleine Unterstützung rund ums Haus – zuverlässig, unkompliziert und fair.</p>
+<p>Praktische Hilfe in der Nachbarschaft – für Garten, Reinigung, Keller und kleine Arbeiten rund ums Haus.</p>
       <div class="hero-actions">
 
   <a class="button" href="https://wa.me/4915225946946" target="_blank">
@@ -343,8 +346,8 @@
  <section class="intro reveal">
     <div class="container">
       <h2>Hallo, ich bin Alaa 👋</h2>
-      <p class="section-subtitle">
-  Kleine Arbeiten, die oft liegen bleiben – ich helfe unkompliziert und zuverlässig.
+     <p class="section-subtitle">
+  Garten, Reinigung, Keller oder kleine Reparaturen – ich unterstütze dort, wo gerade Hilfe gebraucht wird.
 </p>
       <p class="lead">
         Ich wohne hier in der Nähe und mache aktuell eine Ausbildung. In letzter Zeit habe ich angefangen,
@@ -404,14 +407,14 @@
 
  <section class="trust reveal">
     <div class="container">
-      <h2>Unkompliziert & fair</h2>
+      <h2>So läuft es ab</h2>
 
       <div class="trust-list">
-        <div class="trust-item">✔ Faire, eher kleine Preise</div>
-        <div class="trust-item">✔ Zuverlässig & sauber</div>
-        <div class="trust-item">✔ Kleingewerbe-Regelung</div>
-        <div class="trust-item">✔ Rechnung möglich</div>
-        <div class="trust-item">✔ Zu zweit oder mit Transporter möglich</div>
+        <div class="trust-item">✔ Kurz schreiben, worum es geht</div>
+<div class="trust-item">✔ Termin und Preis vorher absprechen</div>
+<div class="trust-item">✔ Arbeit sauber erledigen</div>
+<div class="trust-item">✔ Rechnung auf Wunsch möglich</div>
+<div class="trust-item">✔ Bei Bedarf zu zweit oder mit Transporter</div>
       </div>
     </div>
   </section>
