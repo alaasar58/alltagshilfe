@@ -337,14 +337,36 @@ padding: 110px 22px 40px;
     }
 
 @media (max-width: 760px) {
+  section {
+    padding: 52px 22px;
+  }
+
   .hero-logo {
-  width: 130px;
-  height: 130px;
-}
-  .cards {
- .trust-list {
-  grid-template-columns: 1fr;
-}
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-box {
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .cards,
+  .trust-list {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .trust-item {
+    min-height: auto;
+  }
 
   .contact-card {
     flex-direction: column;
@@ -352,19 +374,36 @@ padding: 110px 22px 40px;
     padding: 28px 22px;
   }
 
+  .contact-left {
+    width: 100%;
+  }
+
   .contact-buttons {
     justify-content: center;
+    flex-direction: column;
+  }
+
+  .contact-buttons .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-right {
+    width: 100%;
+  }
+
+  .qr-code {
+    width: 180px;
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
-  .hero p {
-    font-size: 18px;
+  .section-subtitle {
+    font-size: 17px;
   }
-    }
-  </style>
+}  </style>
 </head>
 
 <body>
