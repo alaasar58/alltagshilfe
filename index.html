@@ -299,27 +299,28 @@
       background: white;
     }
 
-    .cards {
-  grid-template-columns: 1fr;
-}
-   
-      .contact-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 28px 22px;
-      }
+@media (max-width: 760px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-      .contact-buttons {
-        justify-content: center;
-      }
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 22px;
+  }
 
-      h2 {
-        font-size: 28px;
-      }
+  .contact-buttons {
+    justify-content: center;
+  }
 
-      .hero p {
-        font-size: 18px;
-      }
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
     }
   </style>
 </head>
@@ -478,7 +479,6 @@
   </div>
 </footer>
   
-<script>
 <script>
   const revealElements = document.querySelectorAll('.reveal');
 
