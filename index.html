@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlltagsHilfe Service</title>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -66,7 +67,11 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
     }
 
     section { padding: 66px 22px; }
@@ -144,27 +149,104 @@
     }
 
     .contact {
+      background: #f6f3ee;
+    }
+
+    .contact-card {
+      max-width: 980px;
+      margin: 0 auto;
       background: white;
+      border-radius: 30px;
+      padding: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-left {
+      flex: 1;
+    }
+
+    .contact-left p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      color: white;
+    }
+
+    .email-btn {
+      background: #f6c453;
+      color: #1f2933;
+    }
+
+    .contact-info {
+      background: #f7f7f7;
+      border-radius: 18px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+      font-size: 16px;
+    }
+
+    .contact-info a {
+      color: #243b2f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-right {
       text-align: center;
     }
 
-    .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: #f6f3ee;
-      padding: 36px 24px;
-      border-radius: 30px;
+    .qr-link {
+      display: inline-block;
     }
 
-    .phone {
-      font-size: 26px;
+    .qr-code {
+      width: 235px;
+      max-width: 100%;
+      border-radius: 20px;
+      padding: 12px;
+      background: white;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.14);
+    }
+
+    .qr-text {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #5b6770;
+    }
+
+    .legal-line {
+      text-align: center;
+      margin-top: 26px;
+      font-size: 14px;
+      color: #5b6770;
+    }
+
+    .legal-line a {
+      color: #243b2f;
+      text-decoration: none;
       font-weight: bold;
-      margin: 20px 0 8px;
     }
 
-    .mail {
-      font-size: 18px;
-      margin-bottom: 22px;
+    .legal-line span {
+      margin: 0 8px;
     }
 
     footer {
@@ -172,6 +254,27 @@
       padding: 24px;
       font-size: 14px;
       color: #5b6770;
+      background: white;
+    }
+
+    @media (max-width: 760px) {
+      .contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 22px;
+      }
+
+      .contact-buttons {
+        justify-content: center;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -182,7 +285,7 @@
       <div class="label">Aus der Nachbarschaft 😊</div>
       <h1>AlltagsHilfe Service</h1>
       <p>Kleine Unterstützung rund ums Haus – zuverlässig, unkompliziert und fair.</p>
-      <a class="button" href="https://wa.me/49DEINENUMMER">Per WhatsApp schreiben</a>
+      <a class="button" href="https://wa.me/4915225946946" target="_blank">Per WhatsApp schreiben</a>
     </div>
   </header>
 
@@ -200,6 +303,7 @@
   <section>
     <div class="container">
       <h2>Wobei ich helfen kann</h2>
+
       <div class="cards">
         <div class="card">
           <div class="icon">🌿</div>
@@ -242,6 +346,7 @@
   <section class="trust">
     <div class="container">
       <h2>Unkompliziert & fair</h2>
+
       <div class="trust-list">
         <div class="trust-item">✔ Faire, eher kleine Preise</div>
         <div class="trust-item">✔ Zuverlässig & sauber</div>
@@ -252,25 +357,45 @@
     </div>
   </section>
 
-  <section class="contact">
-    <div class="contact-box">
-      <h2>Einfach melden 😊</h2>
-      <p>
-        Wenn Sie Fragen haben oder unsicher sind, ob ich bei etwas helfen kann, schreiben Sie mir gerne.
-        Auch wenn etwas nicht oben steht: einfach fragen – oft findet sich eine Lösung.
-      </p>
+  <section class="contact" id="kontakt">
+    <div class="contact-card">
+      <div class="contact-left">
+        <h2>Einfach melden 😊</h2>
+        <p>
+          Wenn Sie Fragen haben oder Unterstützung im Alltag brauchen,
+          schreiben Sie mir gerne direkt per WhatsApp oder per E-Mail.
+        </p>
 
-      <a href="https://wa.me/4915225946946" target="_blank">
-  <img src="whatsapp-qr.jpeg" alt="WhatsApp QR" width="220">
+        <div class="contact-buttons">
+          <a class="button whatsapp-btn" href="https://wa.me/4915225946946" target="_blank">
+            Per WhatsApp schreiben
+          </a>
 
-        <a class="button" href="https://wa.me/4915123456789">
-  Per WhatsApp schreiben
-</a>
-        
-<a href="mailto:service.alltagshilfe@web.de">
-  📧 service.alltagshilfe@web.de
-</a>
-      
+          <a class="button email-btn" href="mailto:service.alltagshilfe@web.de">
+            E-Mail schreiben
+          </a>
+        </div>
+
+        <div class="contact-info">
+          <p><strong>Telefon / WhatsApp:</strong> <a href="tel:+4915225946946">0152 25946946</a></p>
+          <p><strong>E-Mail:</strong> <a href="mailto:service.alltagshilfe@web.de">service.alltagshilfe@web.de</a></p>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <a class="qr-link" href="https://wa.me/4915225946946" target="_blank">
+          <img src="whatsapp-qr.jpeg" alt="WhatsApp QR-Code" class="qr-code">
+        </a>
+        <p class="qr-text">QR-Code scannen oder anklicken und direkt schreiben</p>
+      </div>
+    </div>
+
+    <div class="legal-line">
+      <a href="#agb">AGB</a>
+      <span>•</span>
+      <a href="#datenschutz">Datenschutz</a>
+      <span>•</span>
+      <a href="#impressum">Impressum</a>
     </div>
   </section>
 
