@@ -458,10 +458,13 @@
     revealElements.forEach((element) => {
       const windowHeight = window.innerHeight;
       const elementTop = element.getBoundingClientRect().top;
+      const elementBottom = element.getBoundingClientRect().bottom;
       const revealPoint = 120;
 
-      if (elementTop < windowHeight - revealPoint) {
+      if (elementTop < windowHeight - revealPoint && elementBottom > revealPoint) {
         element.classList.add('active');
+      } else {
+        element.classList.remove('active');
       }
     });
   }
