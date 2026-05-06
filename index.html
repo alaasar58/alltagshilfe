@@ -188,20 +188,45 @@ padding: 110px 22px 40px;
 
     .trust { background: #efe7dc; }
 
-    .trust-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
+   .trust-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
 
-    .trust-item {
-      background: white;
-      padding: 18px;
-      border-radius: 18px;
-      font-weight: bold;
-    }
+.trust-item {
+  background: white;
+  border-radius: 24px;
+  padding: 22px;
+  min-height: 170px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
 
+.trust-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.12);
+}
+
+.trust-number {
+  width: 42px;
+  height: 42px;
+  background: #f6c453;
+  color: #243b2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.trust-item p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #1f2933;
+}
     .contact {
       background: #f6f3ee;
     }
@@ -317,8 +342,9 @@ padding: 110px 22px 40px;
   height: 130px;
 }
   .cards {
-    grid-template-columns: 1fr;
-  }
+ .trust-list {
+  grid-template-columns: 1fr;
+}
 
   .contact-card {
     flex-direction: column;
@@ -422,18 +448,41 @@ padding: 110px 22px 40px;
   </section>
 
  <section class="trust reveal">
-    <div class="container">
-      <h2>So läuft es ab</h2>
+  <div class="container">
+    <h2>So läuft es ab</h2>
 
-      <div class="trust-list">
-        <div class="trust-item">✔ Kurz schreiben, worum es geht</div>
-<div class="trust-item">✔ Termin und Preis vorher absprechen</div>
-<div class="trust-item">✔ Arbeit sauber erledigen</div>
-<div class="trust-item">✔ Rechnung auf Wunsch möglich</div>
-<div class="trust-item">✔ Bei Bedarf zu zweit oder mit Transporter</div>
+    <p class="section-subtitle">
+      Einfach schreiben, kurz absprechen und dann wird die Arbeit sauber erledigt.
+    </p>
+
+    <div class="trust-list">
+      <div class="trust-item">
+        <div class="trust-number">1</div>
+        <p>Kurz per WhatsApp schreiben, wobei Sie Hilfe brauchen.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">2</div>
+        <p>Ich melde mich zurück und wir klären kurz die Details.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">3</div>
+        <p>Termin und Preis werden vorher gemeinsam abgesprochen.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">4</div>
+        <p>Die Arbeit wird zuverlässig und sauber erledigt.</p>
+      </div>
+
+      <div class="trust-item">
+        <div class="trust-number">5</div>
+        <p>Auf Wunsch ist auch eine Rechnung möglich.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
  <section class="contact reveal" id="kontakt">
     <div class="contact-card">
