@@ -22,7 +22,7 @@
 
   <style>
 
-    .legal-section {
+  .legal-section {
   background: #f6f3ee;
   padding: 55px 22px;
 }
@@ -30,29 +30,61 @@
 .legal-card {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.legal-accordion {
   background: white;
-  border-radius: 28px;
-  padding: 34px;
+  border-radius: 22px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.07);
-}
-
-.legal-card h2 {
   margin-bottom: 18px;
+  overflow: hidden;
 }
 
-.legal-card h3 {
-  margin-top: 24px;
+.legal-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 26px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #243b2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legal-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.legal-accordion summary::after {
+  content: "+";
+  font-size: 28px;
+  color: #243b2f;
+  transition: transform 0.2s ease;
+}
+
+.legal-accordion[open] summary::after {
+  content: "−";
+}
+
+.legal-content {
+  padding: 0 26px 24px 26px;
+}
+
+.legal-content h3 {
+  margin-top: 20px;
   margin-bottom: 8px;
   color: #243b2f;
-  font-size: 20px;
+  font-size: 19px;
 }
 
-.legal-card p {
+.legal-content p {
   margin-bottom: 14px;
   font-size: 16px;
+  color: #1f2933;
 }
 
-.legal-card a {
+.legal-content a {
   color: #243b2f;
   font-weight: bold;
   text-decoration: none;
@@ -622,75 +654,74 @@ padding: 110px 22px 40px;
     AlltagsHilfe Service · Gartenarbeit · Reinigung · Hilfe rund ums Haus
   </div>
 
-  <div class="legal-line">
-    <a href="#datenschutz">Datenschutz</a>
-    <span>•</span>
-    <a href="#impressum">Impressum</a>
-  </div>
-
-<section class="legal-section reveal" id="datenschutz">
+  <section class="legal-section reveal">
   <div class="legal-card">
-    <h2>Datenschutz</h2>
 
-    <p>
-      Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website dient der Information über meine Dienstleistungen
-      im Bereich Alltagshilfe, Gartenarbeit, Reinigung und kleinere Arbeiten rund ums Haus.
-    </p>
+    <details class="legal-accordion" id="datenschutz">
+      <summary>Datenschutz</summary>
+      <div class="legal-content">
+        <p>
+          Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website dient der Information über meine Dienstleistungen
+          im Bereich Alltagshilfe, Gartenarbeit, Reinigung und kleinere Arbeiten rund ums Haus.
+        </p>
 
-    <h3>Kontaktaufnahme</h3>
-    <p>
-      Wenn Sie mich per WhatsApp, Telefon oder E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten
-      wie Name, Telefonnummer, E-Mail-Adresse, Nachricht und gegebenenfalls Fotos verarbeitet, damit ich Ihre Anfrage
-      beantworten und den Aufwand einschätzen kann.
-    </p>
+        <h3>Kontaktaufnahme</h3>
+        <p>
+          Wenn Sie mich per WhatsApp, Telefon oder E-Mail kontaktieren, werden die von Ihnen mitgeteilten Daten
+          wie Name, Telefonnummer, E-Mail-Adresse, Nachricht und gegebenenfalls Fotos verarbeitet, damit ich Ihre Anfrage
+          beantworten und den Aufwand einschätzen kann.
+        </p>
 
-    <h3>WhatsApp</h3>
-    <p>
-      Bei der Kontaktaufnahme über WhatsApp gelten zusätzlich die Datenschutzbedingungen des jeweiligen Anbieters.
-      Bitte senden Sie nur Informationen oder Fotos, die für Ihre Anfrage notwendig sind.
-    </p>
+        <h3>WhatsApp</h3>
+        <p>
+          Bei der Kontaktaufnahme über WhatsApp gelten zusätzlich die Datenschutzbedingungen des jeweiligen Anbieters.
+          Bitte senden Sie nur Informationen oder Fotos, die für Ihre Anfrage notwendig sind.
+        </p>
 
-    <h3>Speicherung</h3>
-    <p>
-      Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage, die Durchführung der Arbeit
-      oder gesetzliche Aufbewahrungspflichten erforderlich ist.
-    </p>
+        <h3>Speicherung</h3>
+        <p>
+          Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage, die Durchführung der Arbeit
+          oder gesetzliche Aufbewahrungspflichten erforderlich ist.
+        </p>
 
-    <h3>Ihre Rechte</h3>
-    <p>
-      Sie können Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten verlangen, soweit keine gesetzlichen
-      Aufbewahrungspflichten entgegenstehen.
-    </p>
+        <h3>Ihre Rechte</h3>
+        <p>
+          Sie können Auskunft, Berichtigung oder Löschung Ihrer personenbezogenen Daten verlangen, soweit keine gesetzlichen
+          Aufbewahrungspflichten entgegenstehen.
+        </p>
 
-    <p>
-      Verantwortlich für die Datenverarbeitung ist die im Impressum genannte Person.
-    </p>
-  </div>
-</section>
+        <p>
+          Verantwortlich für die Datenverarbeitung ist die im Impressum genannte Person.
+        </p>
+      </div>
+    </details>
 
-<section class="legal-section reveal" id="impressum">
-  <div class="legal-card">
-    <h2>Impressum</h2>
+    <details class="legal-accordion" id="impressum">
+      <summary>Impressum</summary>
+      <div class="legal-content">
+        <p><strong>Angaben gemäß § 5 DDG</strong></p>
 
-    <p><strong>Angaben gemäß § 5 DDG</strong></p>
+        <p>
+          AlltagsHilfe Service<br>
+          Alaa<br>
+          DEINE STRASSE UND HAUSNUMMER<br>
+          DEINE PLZ UND STADT
+        </p>
 
-    <p>
-      AlltagsHilfe Service<br>
-      Mohammed Alaa Sarhan <br>
-      22926 Ahrensburg 
-    </p>
+        <p>
+          <strong>Kontakt:</strong><br>
+          Telefon / WhatsApp: <a href="tel:+4915225946946">0152 25946946</a><br>
+          E-Mail: <a href="mailto:service.alltagshilfe@web.de">service.alltagshilfe@web.de</a>
+        </p>
 
-    <p>
-      <strong>Kontakt:</strong><br>
-      Telefon / WhatsApp: <a href="tel:+4915225946946">0152 25946946</a><br>
-      E-Mail: <a href="mailto:service.alltagshilfe@web.de">service.alltagshilfe@web.de</a>
-    </p>
+        <p>
+          <strong>Hinweis:</strong><br>
+          Die angebotenen Leistungen werden nach vorheriger Absprache ausgeführt.
+          Preise und Termine werden vor Beginn der Arbeit gemeinsam abgestimmt.
+        </p>
+      </div>
+    </details>
 
-    <p>
-      <strong>Hinweis:</strong><br>
-      Die angebotenen Leistungen werden nach vorheriger Absprache ausgeführt.
-      Preise und Termine werden vor Beginn der Arbeit gemeinsam abgestimmt.
-    </p>
   </div>
 </section>
   
