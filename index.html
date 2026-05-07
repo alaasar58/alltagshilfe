@@ -491,7 +491,8 @@ padding: 110px 22px 40px;
   
 <script>
   const trackingUrl = "https://script.google.com/macros/s/AKfycbxg_ezInY5Ha7P3icwmOpiriZtGqXk85vFIsQZwoE0eXdTHB5VeH8MW8bTgt_7vtBLXWw/exec";
-
+const visitId = Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 8);
+  
   function getDeviceType() {
     const userAgent = navigator.userAgent.toLowerCase();
 
@@ -508,6 +509,7 @@ padding: 110px 22px 40px;
 
   function trackAction(actionName) {
     const data = {
+      visitId: visitId,
       action: actionName,
       page: window.location.pathname,
       device: getDeviceType(),
