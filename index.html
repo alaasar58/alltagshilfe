@@ -528,6 +528,36 @@ padding: 110px 22px 40px;
   window.addEventListener("load", function () {
     trackAction("seite_geoeffnet");
   });
+  let scroll25 = false;
+let scroll50 = false;
+let scroll75 = false;
+let scroll100 = false;
+
+window.addEventListener("scroll", function () {
+  const scrollTop = window.scrollY;
+  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = Math.round((scrollTop / pageHeight) * 100);
+
+  if (scrollPercent >= 25 && !scroll25) {
+    scroll25 = true;
+    trackAction("scroll_25");
+  }
+
+  if (scrollPercent >= 50 && !scroll50) {
+    scroll50 = true;
+    trackAction("scroll_50");
+  }
+
+  if (scrollPercent >= 75 && !scroll75) {
+    scroll75 = true;
+    trackAction("scroll_75");
+  }
+
+  if (scrollPercent >= 95 && !scroll100) {
+    scroll100 = true;
+    trackAction("scroll_100");
+  }
+});
 
   document.addEventListener("DOMContentLoaded", function () {
     const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
