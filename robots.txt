@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alaasar58.github.io/alltagshilfe/sitemap.xml
